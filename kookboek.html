@@ -4,9 +4,8 @@
   <title>HutsKoekKookBoek</title>
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 </head>
-
 <body>
-  <form onsubmit=" Maak Recept() ; return false; ">
+  <form onsubmit= "Maak Recept() ; return false; ">
     <fieldset>
       <legend>Vul waarden in voor het recept:
       </legend>
@@ -37,15 +36,14 @@
   <script>
     function maakRecept() {
       // waarden ophalen uit HTML-formulier
-           var ingrediënt1 = document.getElementById("i1").value;
-		   var ingrediënt2 = document.getElementById("i2").value;
-		   var bewerking = document.getElementById("b").value;
-		   var duur = document.getElementById("d").value;
-      // variabelen samenvoegen tot recepttekst
-      document.getElementById("r").innerHTML = 
-	 bewerking + " " + ingrediënt1 + " en " + ingrediënt2 + " voor " + duur;
+           var ingrediënt1 = document.getElementById("i1").value ;
+		   var ingrediënt2 = document.getElementById("i2").value ;
+		   var bewerking = document.getElementById("b").value ;
+		   var duur = document.getElementById("d").value ;
+      // variabelen samenvoegen tot recepttekst 
+	var recept =  " Voeg de " + ingrediënt1 + " en de " + ingrediënt2 + " bij elkaar ";
       // recept in beeld zetten
-     
+     document.getElementById("r").innerHTML = recept;
     }
   </script>
 </body>
